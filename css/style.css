@@ -9,11 +9,19 @@ body {
   common styles end here
  -------------------------------------*/
 
+
+ /*------------------------------------ 
+  header styles start here
+ --------------------------------------*/
 header {
   background-image: url(https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-shopping-mall-supermarket-selection-merchandise-poster-background-material-image_133225.jpg);
   padding-bottom: 60px;
 }
+ /*------------------------------------ 
+  header styles end here
+ --------------------------------------*/
 
+ 
 /*----------------------------------- 
   search field styles start here
  -------------------------------------*/
