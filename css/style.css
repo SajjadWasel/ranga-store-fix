@@ -1,65 +1,162 @@
+/*----------------------------------- 
+  common styles start here
+ -------------------------------------*/
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+/*----------------------------------- 
+  common styles end here
+ -------------------------------------*/
+
+header {
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-shopping-mall-supermarket-selection-merchandise-poster-background-material-image_133225.jpg);
+  padding-bottom: 60px;
+}
+
+/*----------------------------------- 
+  search field styles start here
+ -------------------------------------*/
 .search-field {
   border: none;
   border-radius: 50px;
   padding: 5px;
   outline: none;
+  animation: search-animate 1.5s;
 }
-.search-field:hover {
-  outline: none;
-  border: none;
+
+@keyframes search-animate {
+  from {
+    
+  }
 }
+
 .search-box {
-  border: 1px solid rgb(3, 118, 211);
-  width: 281px;
+  width: 400px;
   border-radius: 5px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 60px;
   border-right: none;
 }
+
 .search-button {
   padding: 10px 50px;
   border-radius: 25px;
   margin-left: 20px;
 }
+/*----------------------------------- 
+  search field styles end here
+ -------------------------------------*/
+
+
+/*----------------------------------- 
+  product styles start here
+ -------------------------------------*/
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* border: 1px solid black; */
   text-align: center;
   width: 100%;
-  margin: auto;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
+  margin-left: 15px;
 }
+
 .single-product {
-  padding: 10px;
-  transition: 0.6s;
+  transition: 0.5s;
+  height: 560px;
+  align-items: center;
+  margin: 7px;
+  padding-top: 15px;
+  box-shadow: 1px 1px 5px #a5f8be;
+  background-image: linear-gradient(white, white,#a5e5da);
 }
+
 .single-product:hover {
-  box-shadow: 4px 4px 7px gray;
+  box-shadow: 4px 4px 13px #76f0c1,
+              -4px -4px 13px #76f09b;
   border-radius: 10px;
-  border: 1px solid cyan;
+  background: white;
 }
+
+.single-product:hover img {
+  animation: example 2s;
+}
+
+
+
+.product-name {
+  color: #6b6969;
+}
+
+.gray-text {
+  color: #6b6969;
+}
+
+.price {
+  color: #6b6969;
+}
+
+@keyframes example {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
 .product-image {
   width: 150px;
   height: 150px;
+  padding: 5px;
 }
+/*----------------------------------- 
+  product styles end here
+ -------------------------------------*/
+
+
+ /*----------------------------------- 
+  cart styles start here
+ -------------------------------------*/
 .cart {
   width: 350px;
-  /* border: 1px solid green; */
+  border: 1px solid rgb(99, 187, 238);
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
   border-radius: 5px;
   margin-right: 30px;
   position: fixed;
+  box-shadow: none;
+  transition: 0.5s;
+  margin-top: -90px;
+  background-color: white;
 }
+
+.cart:hover {
+  box-shadow: 5px 5px 25px rgb(161, 241, 156),
+            -5px -5px 25px rgb(207, 138, 228); 
+}
+
 .cart-main {
   padding-right: 30px;
 }
+
+.card-info {
+  height: 230px;
+}
+ /*----------------------------------- 
+  cart styles end here
+ -------------------------------------*/
+
+
+
+ /*----------------------------------- 
+  media quary start here
+ -------------------------------------*/
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
@@ -67,7 +164,6 @@ body {
   }
   .cart {
     width: 300px;
-    /* border: 1px solid green; */
     padding: 10px;
     box-shadow: 10px 10px 20px gray;
     border-radius: 5px;
@@ -84,3 +180,6 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+ /*----------------------------------- 
+  media quary end here
+ -------------------------------------*/
